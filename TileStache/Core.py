@@ -564,6 +564,8 @@ class Layer:
                     tile = subtile
                 
                 _addRecentTile(self, other, format, body)
+        elif self.palette256:
+            tile = apply_palette256(tile)
         
         return tile
     
